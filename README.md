@@ -1,6 +1,11 @@
 
 This repository is the output of the https://angular.io/start tutorial which helps beginners to get used to angular concepts, very briefly. The notes below were gathered with the intention of summarizing the concepts mentioned in the tutorial for future refence and they were also taken from https://angular.io/start.
 
+To start the app:
+ 
+1. npm install
+2. ng serve --open
+
 # Quick Takeaways 
 
 ## Part I
@@ -265,8 +270,6 @@ export class ProductListComponent {
   }
 }
 ```
-
-
 
 **More on Output and EventEmitter**
 [https://ultimatecourses.com/blog/component-events-event-emitter-output-angular-2]
