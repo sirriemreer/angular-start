@@ -633,7 +633,7 @@ In this section, you'll use the HTTP client to retrieve shipping prices from an 
 ### Predefined shipping data
 For the purpose of this Getting Started guide, we have provided shipping data in assets/shipping.json. You'll use this data to add shipping prices for items in the cart.
 
-#### şsrc/assets/shipping.json
+#### src/assets/shipping.json
 ``` json
 [
   {
@@ -650,7 +650,7 @@ For the purpose of this Getting Started guide, we have provided shipping data in
   }
 ]
 ```
-#### Enable HttpClient for app
+### Enable HttpClient for app
 Before you can use Angular's HTTP client, you must set up your app to use HttpClientModule.
 
 __Angular's HttpClientModule registers the providers needed to use a single instance of the HttpClient service throughout your app. The HttpClient service is what you inject into your services to fetch data and interact with external APIs and resources.__
@@ -738,7 +738,7 @@ Continue working in cart.service.ts.
 
 Below the clearCart() method, define a new getShippingPrices() method that uses the HttpClient#get() method to retrieve the shipping data (types and prices).
 
-### src/app/cart.service.ts
+#### src/app/cart.service.ts
 ``` typescript
 export class CartService {
   items = [];
@@ -854,8 +854,7 @@ Modify the shipping component so it uses the cart service to retrieve shipping d
 
   constructor(
     private cartService: CartService
-  ) {
-  }
+  ) {  }
 
   ngOnInit() {
     this.shippingCosts = this.cartService.getShippingPrices();
@@ -945,8 +944,7 @@ First, you'll set up the checkout form model. The form model is the source of tr
   constructor(
     private cartService: CartService,
     private formBuilder: FormBuilder,
-  ) {
-  }
+  ) {  }
   }
   ```
 3. In the CartComponent class, define the checkoutForm property to store the form model.During checkout, the app will prompt the user for a name and address. So that you can gather that information later, set the checkoutForm property with a form model containing name and address fields, using the FormBuilder#group() method.
